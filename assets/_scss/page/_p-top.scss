@@ -1,0 +1,391 @@
+.top {
+  @include e(mv) {
+    height: 100vh;
+    .image {
+      video {
+        height: calc(100% + 120px);
+        top: -50px;
+        @include sp_414 {
+          height: calc(100% + 150px);
+        }
+        @include sp {
+          height: 120%;
+        }
+        @include mq {
+          height: 125%;
+        }
+        @include mq_1500 {
+          height: 140%;
+        }
+      }
+    }
+  }
+  @include e(sec) {
+    padding-bottom: 125px;
+    background-repeat: no-repeat;
+    position: relative;
+    // margin-top: 120px;
+    max-width: 975px;
+    margin: 120px auto 0;
+    @include sp_414 {
+      padding-bottom: 145px;
+      // margin-top: 135px;
+      margin: 135px auto 0;
+    }
+    @include e(title) {
+      margin-bottom: 40px;
+      position: relative;
+      @include sp_414 {
+        margin-bottom: 50px;
+      }
+      &::before {
+        content: url(../../assets/images/deco-top.svg);
+        position: absolute;
+        top: -65px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+    @include e(text) {
+      position: relative;
+      @include sp_414 {
+        max-width: 670px;
+      }
+      &.is-form {
+        max-width: 77%;
+        @include sp_414 {
+          max-width: 565px;
+        }
+        form {
+          dl {
+            dt {
+              letter-spacing: 2px;
+              margin-bottom: 5px; 
+              @include sp_414 {
+                margin-bottom: 0;
+              }
+              span {
+                color: #fff;
+                background-color: #ff0871;
+                font-size: 8px;
+                padding: 2px 8px;
+                margin-left: 6px;
+              }
+            }
+            dd {
+              width: 100%;
+              margin-bottom: 10px;
+              @include sp_414 {
+                margin-bottom: 7px;
+              }
+              input, textarea {
+                width: 100% ;
+                font-size: 10px;
+                font-family: $noto;
+                letter-spacing: 2px;
+                border: 1px solid #000;
+                padding: 6px;
+                resize: none;
+              }
+            }
+          }
+          .btn {
+            margin-top: 25px;
+            height: 30px;
+            font-size: 10px;
+            width: 160px;
+            @include sp_414 {
+              height: 24px;
+              font-size: 8px;
+              width: 120px;
+            }
+            &::after {
+              margin-top: 0;
+              @include sp_414 {
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+      }
+      &.is-company {
+        max-width: 70%;
+        @include sp_414 {
+          max-width: 445px;
+        }
+        .logo {
+          text-align: center;
+        }
+      }
+      &::after {
+        position: absolute;
+        content: url(../../assets/images/deco-btm.svg);
+        text-align: center;
+        bottom: -60px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      h3 {
+        line-height: 1.8;
+        margin-bottom: 30px;
+        letter-spacing: 3px;
+        @include sp_414 {
+          letter-spacing: 1px;
+          margin-bottom: 50px;
+        }
+      }
+      & > p {
+        line-height: 1.9;
+        max-width: 75%;
+        margin: 0 auto;
+        @include sp_414 {
+          max-width: none;
+        }
+      }
+      .link {
+        width: 120px;
+        height: 30px;
+        font-family: $gotham;
+        font-size: 12px;
+        background-color: #000355;
+        margin: 15px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        letter-spacing: 2px;
+        line-height: 1;
+        @include sp_414 {
+          height: 24px;
+          font-size: 8px;
+          margin: 5px 0 0 auto;
+        }
+        &::after {
+          content: url(../../assets/images/ico-right-wh.svg);
+          margin-left: 10px;
+          margin-right: -3px;
+          margin-top: 0;
+          @include sp_414 {
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+    @include e(target) {
+      position: absolute;
+      visibility: hidden;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.1);
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+    }
+    &.sec1 {
+      text-align: center;
+      padding: 60px 0;
+      margin-top: 0;
+      @include sp_414 {
+        padding: 110px 0;
+      }
+      &::before {
+        display: none;
+      }
+    }
+    &.sec2 {
+      background-image: url(../../assets/images/top/top-about-sp.png), url(../../assets/images/top/top-about-text.png);
+      background-size: contain, 40px;
+      background-position: left 50px, right bottom;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-about.png), url(../../assets/images/top/top-about-text.png);
+        background-position: left center, right bottom;
+        background-size: contain, 50px;
+        
+      }
+      @include sp {
+        background-size: contain, 72px;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+      }
+    }
+    &.sec3 {
+      background-image: url(../../assets/images/top/top-view-text.png), url(../../assets/images/top/top-view-sp.png);
+      background-size: 40px, contain;
+      background-position: left bottom, right 50px;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-view-text.png), url(../../assets/images/top/top-view.png);
+        background-position: left bottom, right center;
+        background-size: 50px, contain;
+      }
+      @include sp {
+        background-size: 72px, contain;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.1) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 71%, rgba(255,255,255,0.1) 100%);
+        }
+      }
+    }
+    &.sec4 {
+      background-image: url(../../assets/images/top/top-service-sp.png), url(../../assets/images/top/top-service-text.png);
+      background-size: contain, 40px;
+      background-position: left 50px, right bottom;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-service.png), url(../../assets/images/top/top-service-text.png);
+        background-position: left center, right bottom;
+        background-size: contain, 50px;
+      }
+      @include sp {
+        background-size: contain, 72px;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+      }
+    }
+    &.sec5 {
+      background-image: url(../../assets/images/top/top-products-text.png), url(../../assets/images/top/top-products-sp.png);
+      background-size: 40px, contain;
+      background-position: left bottom, right 50px;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-products-text.png), url(../../assets/images/top/top-products.png);
+        background-position: left bottom, right center;
+        background-size: 50px, contain;
+      }
+      @include sp {
+        background-size: 72px, contain;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.1) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 71%, rgba(255,255,255,0.1) 100%);
+        }
+      }
+      .image {
+        background-image: url(../../assets/images/top/top-product-img.png);
+        text-align: left;
+        width: 75%;
+        padding: 24px 6px 6px;
+        margin: 30px auto 0;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        @include sp_414 {
+          padding: 30px 6px 6px;
+          text-align: center;
+          background-size: cover;
+          width: auto;
+        }
+        img {
+          width: 58px;
+          margin-left: 20px;
+          @include sp_414 {
+            margin-left: 0;
+          }
+        }
+        .link {
+          background-color: #fff;
+          color: #000355;
+          width: 150px;
+          margin: -18px 0 0 auto;
+          @include sp_414 {
+            width: 110px;
+            margin: 15px 0 0 auto;
+          }
+          &::after {
+            content: url(../../assets/images/ico-right-bl.svg);
+            margin-left: 10px;
+            margin-top: 2px;
+            margin-right: -3px;
+          }
+        }
+      }
+    }
+    &.sec6 {
+      background-image: url(../../assets/images/top/top-contact-sp.png), url(../../assets/images/top/top-contact-text.png);
+      background-size: contain, 40px;
+      background-position: left 50px, right bottom;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-contact.png), url(../../assets/images/top/top-contact-text.png);
+        background-position: left center, right bottom;
+        background-size: contain, 50px;
+      }
+      @include sp {
+        background-size: contain, 72px;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        }
+      }
+    }
+    &.sec7 {
+      background-image: url(../../assets/images/top/top-company-text.png), url(../../assets/images/top/top-company-sp.png);
+      background-size: 40px, contain;
+      background-position: left bottom, right 150px;
+      @include sp_414 {
+        background-image: url(../../assets/images/top/top-company-text.png), url(../../assets/images/top/top-company.png);
+        background-position: left bottom, right center;
+        background-size: 50px, contain;
+      }
+      @include sp {
+        background-size: 72px, contain;
+      }
+      &::before {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
+        @include sp_414 {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.1) 100%);
+        }
+        @include mq {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 71%, rgba(255,255,255,0.1) 100%);
+        }
+      }
+      .logo {
+        img {
+          height: 50px;
+          @include sp_414 {
+            height: auto;
+          }
+        }
+      }
+      .text {
+        p {
+          font-size: 12px;
+          @include sp_414 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

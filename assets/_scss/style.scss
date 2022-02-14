@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+// 設定ファイルのインポート
+@import "_config";
+@import "_mixin";
+
+@import "base/_reset";
+@import "base/_common";
+@import "base/_general";
+@import "base/_misc";
+
+@import "base/_animation";
+
+@import "layout/_header";
+@import "layout/_main";
+@import "layout/_footer";
+@import "layout/_wrapper";
+@import "layout/_sidebar";
+@import "layout/_section";
+
+@import "object/_o-btn";
+@import "object/_o-slick";
+
+@import "page/_p-top";
+@import "page/_p-page";
+@import "page/_p-page2";

@@ -1,0 +1,53 @@
+/*
+ * Config
+ */
+
+/*
+ * Color
+ */
+$main_color: #000355;
+$main_bg: #fff;
+
+$blue: #000355;
+$gray: #9D9D9D;
+
+// BURGER COLOR
+$burger: #fff;
+$burger_open: #fff;
+
+/*
+ * Media Break
+ */
+$breakpoint_414: 561px;
+$breakpoint_sp: 769px;
+$breakpoint: 1367px;
+$breakpoint_1500: 1500px;
+
+/*
+ * Fonts
+ */
+// @imports:
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap');
+// @font-face:
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/GothamMedium.woff2') format('woff2'),
+      url('../fonts/GothamMedium.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// font variable:
+$main_font: 'Noto Serif JP', serif;
+$noto: 'Noto Serif JP', serif;
+$sans: 'Noto Sans JP', sans-serif;
+$gotham: 'Gotham', sans-serif;
+$garamond: 'Cormorant Garamond', serif;
+// $main_font: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+// $mplus: 'M PLUS 1p', sans-serif;
+// $shingo : a-otf-ud-shin-go-pr6n, sans-serif;
+// $yugo: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+// $yumin: "Yu Mincho", "YuMincho", 'メイリオ', Meiryo, 'ＭＳ Ｐ明朝', serif;
+// $helvetica: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+

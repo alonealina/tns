@@ -1,0 +1,103 @@
+html {
+  margin-top: 0 !important;
+  font-size: 16px;
+}
+
+html, body {
+  font-family: $main_font;
+  font-style: normal;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 100%;
+  overflow-x: hidden;
+  // background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  color: $main_color;
+  background-color: $main_bg;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  background-size: 100%;
+  position: relative;
+  text-align: unset !important;
+  font-size: 1rem;
+  @include sp {
+    font-size: 1rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+header, nav, main, footer, small, button, label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $main_color;
+}
+
+a:hover, a:active, button:hover, button:active{
+  color: inherit;
+  outline: 0;
+  text-decoration: none;
+  // font-weight: bold;
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  // outline: none;
+}
+
+a:hover, a:active{
+  outline: 0;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  color: #a5a5a5;
+}
+:-ms-input-placeholder {
+  color: #a5a5a5;
+}
+::-moz-placeholder {
+  color: #a5a5a5;
+}
+::-placeholder {
+  color: #a5a5a5;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+.cf {
+  @include cf;
+}
+
+.text_indent {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+
+

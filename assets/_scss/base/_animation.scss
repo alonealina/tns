@@ -1,0 +1,107 @@
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity:0
+  }
+
+  100% {
+    opacity:1
+  }
+
+
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity:0
+  }
+  100% {
+    opacity:1
+  }
+}
+
+@-webkit-keyframes FadeInY {
+  0% {
+    opacity:0;
+    transform:translateY(40px)
+  }
+  100% {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+@keyframes FadeInY {
+  0% {
+    opacity:0;
+    transform:translateY(40px)
+  }
+  100% {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+@-webkit-keyframes FadeInX {
+  0% {
+    opacity:0;
+    transform:translateX(40px)
+  }
+  100% {
+    opacity:1;
+    transform:translateX(0)
+  }
+}
+
+@keyframes FadeInX {
+  0% {
+    opacity:0;
+    transform:translateX(40px)
+  }
+  100% {
+    opacity:1;
+    transform:translateX(0)
+  }
+}
+
+.is-fadein {
+  transition: all 2s ease;
+  opacity: 0;
+  &.is-play {
+    opacity: 1;
+  }
+}
+
+.is-fade-y {
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateY(80px);
+  &.is-play {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.is-fade-x {
+  transition: all 2s ease;
+  opacity: 0;
+  transform: translateX(80px);
+  &.is-play {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.is-fadeAutoin {
+  -webkit-animation:FadeIn 1.5s ease;
+  animation:FadeIn 2s ease
+}
+
+.is-fadeAuto-y {
+  -webkit-animation:FadeInY 1.5s ease;
+  animation:FadeInY 2s ease
+}
+
+.is-fadeAuto-x {
+  -webkit-animation:FadeInX 1.5s ease;
+  animation:FadeInX 2s ease
+}

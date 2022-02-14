@@ -1,0 +1,59 @@
+.footer {
+  background-color: #000;
+  margin-top: 25px;
+  @include e(content) {
+    max-width: 695px;
+    .sitemap {
+      padding-top: 20px;
+      @include sp {
+        padding-top: 42px;
+      }
+      @include e(title) {
+        color: #fff;
+        letter-spacing: 2px;
+        border: 1px solid #fff;
+        width: 110px;
+        text-align: center;
+        padding: 5px;
+        margin: 0 auto 40px;
+      }
+      @include e(content) {
+        a, p {
+          color: #fff;
+        }
+        .col {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          ul {
+            border-left: 1px solid #fff;
+            margin-top: 5px;
+            padding-left: 10px;
+            &.is-product {
+              padding-top: 38px;
+            }
+            li {
+              padding-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 0;
+      @include sp {
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+    }
+    .copyright {
+      text-align: center;
+      padding-bottom: 20px;
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// OBJECT: BTN
+.btn {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  // font-family: $main_font;
+  text-align: center;
+  transition: opacity 0.5s;
+  &:hover {
+    opacity: 0.9;
+  }
+  &-blue {
+    font-family: $sans;
+    background-color: #000355;
+    color: #fff;
+    width: 120px;
+    height: 24px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    @include sp_414 {
+      font-size: 8px;
+    }
+    &::after {
+      content: url(../../assets/images/ico-right-wh.svg);
+      margin-left: 10px;
+      margin-top: 2px;
+      margin-right: -3px;
+    }
+  }
+  &-white {
+    font-family: $gotham;
+    background-color: #fff;
+    color: #000355;
+    letter-spacing: 2px !important;
+    padding: 5px 20px;
+    font-size: 10px;
+    @include sp_414 {
+      font-size: 8px;
+    }
+    &::after {
+      content: url(../../assets/images/ico-right-bl.svg);
+      margin-left: 10px;
+      margin-top: 2px;
+      margin-right: -3px;
+    }
+  }
+}
